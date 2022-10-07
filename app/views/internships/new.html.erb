@@ -1,0 +1,9 @@
+<h1>New Internship</h1>
+<%= simple_form_for @internship do |f| %>
+  <%= f.input :title %>
+  <%= f.input :address %>
+  <%= f.button :submit %>
+  <%= f.button :button, "Cancel", type: "reset" %>
+<% end %><br>
+<br>
+<%= link_to "Back to all Internships", internships_path %>
