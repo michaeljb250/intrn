@@ -6,6 +6,9 @@ ruby "3.1.2"
 gem 'sass-rails'
 gem 'bootstrap-sass'
 
+gem "cloudinary"
+
+
 gem "geocoder"
 
 gem "devise"

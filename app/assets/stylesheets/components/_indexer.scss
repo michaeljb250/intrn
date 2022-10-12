@@ -1,3 +1,109 @@
 .backgrond {
-  background-color: #004aad;
+  background-color:  #fff280;
+}
+
+.card-product {
+  overflow: hidden;
+  height: 150px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+.card-product img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-product h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-product p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-product .card-product-infos {
+  padding: 16px;
+  padding-bottom: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
+}
+
+.search-box {
+  font-family:'Courier New', Courier, monospace;
+  color: #fff280;
+}
+
+.search-boxer {
+  font-family:'Courier New', Courier, monospace;
+  color: blue;
+  background-color: #fff280;
+}
+
+.search-boxd {
+  font-family:'Courier New', Courier, monospace;
+  color: blue;
+  background-color:white;
+  width: 650px;
+}
+
+.big-pad {
+padding-bottom: 50px;
+padding-top: 30px;
+display: flex;
+flex-direction: row;
+justify-content: center;
+}
+
+.centrino {
+ display: flex;
+ flex-direction: row;
+ justify-content: space-evenly;
+ align-items: center;
+ padding-top: 200px;
+}
+
+.fonter {
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 65px;
+  color: #004aad;
+}
+
+@font-face {
+  font-family: 'Bebas-Regular';
+  src: url('Bebas.Regular.ttf');
+}
+
+a {
+  color: #0060B6;
+  text-decoration: none;
+}
+
+a:hover {
+  color:#00A0C6;
+  text-decoration:none;
+  cursor:pointer;
+}
+
+.mover {
+  padding-left: 575px;
+  padding-top: 75px;
+}
+
+.smtsizer {
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding-top: 20px;
+width: 300px;
 }

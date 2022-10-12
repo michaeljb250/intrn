@@ -1,9 +1,20 @@
-<h1>New Internship</h1>
+<div class="mover">
+<h1 class="fonter">New Internship</h1><br>
+<br>
 <%= simple_form_for @internship do |f| %>
-  <%= f.input :title %>
-  <%= f.input :address %>
-  <%= f.button :submit %>
+  <%= f.input :title %> <br>
+  <%= f.input :address %> <br>
+ <%= f.input :paid %> <br>
+ <%= f.input :dates %> <br>
+ <%= f.input :industry %> <br>
+ <%= f.input :description %> <br>
+ <%= f.input :company %> <br>
+   <%= f.input :photo, as: :file %><br>
+     <div class="fonter">
+  <%= f.button :submit %> <br>
   <%= f.button :button, "Cancel", type: "reset" %>
+  </div>
 <% end %><br>
 <br>
 <%= link_to "Back to all Internships", internships_path %>
+</div>
