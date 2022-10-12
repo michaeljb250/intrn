@@ -1,4 +1,28 @@
-<h1>Hi</h1>
+<div class="backgrond">
+<div class="big-pad">
+<div class="search-box" style="width: 900px;" >
+  <%= form_with url: internships_path, method: :get, class: "d-flex align-items-center" do |form| %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "search-boxd",
+      placeholder: "Enter Keywords! e.g Finance, Paid "
+    %>
+    <%= submit_tag "Search", class: "search-boxer" %>
+  <% end %>
+  </div>
+  </div>
+
+<% @internships.each do |i| %>
+<div class="card-product">
+  <%= cl_image_tag i.photo.key %>
+  <div class="card-product-infos">
+    <h2></h2>
+    <p> <%= i.company %> - <%= i.industry %> <p></p> <%= i.title %> <p> <strong> </strong> <%= i.description %> <p> Dates: <%= i.dates %> </p></p>
+  </div>
+</div>
+<% end %>
+
+
 <div style="width: 100%; height: 600px;"
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"

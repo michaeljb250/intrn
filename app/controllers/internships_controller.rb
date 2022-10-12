@@ -1,13 +1,24 @@
 class InternshipsController < ApplicationController
   def index
     @internships = Internship.all
-    # The `geocoded` scope filters only flats with coordinates
+    if params[:query]
+      sql_query = "internships.title @@ :query
+      OR internships.industry @@ :query
+      OR internships.company @@ :query
+      OR internships.description @@ :query
+      "
+
+     @internships = @internships.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @internships = Internship.all
+    end
     @markers = @internships.geocoded.map do |internship|
       {
         lat: internship.latitude,
         lng: internship.longitude
       }
     end
+
   end
   def new
     @internship = Internship.new
@@ -21,6 +32,6 @@ class InternshipsController < ApplicationController
 
   private
   def internship_params
-    params.require(:internship).permit(:title, :address)
+    params.require(:internship).permit(:title, :address, :paid, :dates, :industry, :description, :company, :photo)
   end
 end
